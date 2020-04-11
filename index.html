@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body>
+    <div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <style>
+
+        </style>
+
+        <div class="weight-calculator">
+            <div class="btn-block">
+                <button data-age-grp="adult" class="btn age-grp active">ADULT</button>
+                <button data-age-grp="child" class="btn age-grp">CHILD</button>
+            </div>
+            <div class="container-main-block">
+
+                <div class="adult-section">
+                    <div class="set-of-box">
+                        <p class="title input-title"> Height </p>
+                        <form class="hide-on-cm" action="">
+                            <p class="title label">Feet</p>
+                            <input id="height-in-feet" min="0" value="0" type="number" class="title input-box">
+                        </form>
+                    </div>
+                    <div class="set-of-box">
+                        <p class="title value-converter feet-to-cm">Switch to cm </p>
+                        <p class="title value-converter feet-to-cm" style="display: none;">Switch to Feet </p>
+                        <form action="">
+                            <p class="height-converter title label">Inches</p>
+                            <input id="height-in-inch" min="0" max value="0" type="number" class="title input-box">
+                        </form>
+                    </div>
+                    <div class="set-of-box">
+                        <p class="title input-title">Age </p>
+                        <form action="">
+                            <p class="title label"></p>
+                            <input min="0" type="number" class="age-grp-input-box title input-box">
+                        </form>
+                    </div>
+
+                    <div class="set-of-box">
+                        <p class="title input-title"> Sex </p>
+                        <p class="title value-converter" style="margin: 1rem auto 5px 0px;">Why are we asking? </p>
+                        <div class="custom-radio-wrap">
+                            <!-- <form> -->
+                            <form class="gender-form" action="">
+                                <div class="form-group">
+                                    <input id="male" type="radio" name="custom-radio-btn">
+                                    <label class="custom-radio" for="male"></label>
+                                    <span class="label-text">Male</span>
+                                </div>
+                                <div class="form-group">
+                                    <input id="female" type="radio" name="custom-radio-btn">
+                                    <label class="custom-radio" for="female"></label>
+                                    <span class="label-text">Female</span>
+                                </div>
+                            </form>
+                            <!-- </form> -->
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <div class="adult-section">
+                    <div class="set-of-box">
+                        <p class="title input-title">Weight </p>
+                        <form class="hide-on-kg" action="">
+                            <p class="title label">Stone</p>
+                            <input id="weight-in-stone" min="0" value="0" type="number" class="title input-box">
+                        </form>
+                    </div>
+                    <div class="set-of-box">
+                        <p class="title value-converter pound-to-kg"> Switch to kg </p>
+                        <form action="">
+                            <p class="weight-converter title label">Pounds</p>
+                            <input id="weight-in-pound" min="0" value="0" type="number" class="title input-box">
+                        </form>
+                    </div>
+                    <div class="set-of-box">
+                        <p class="title input-title"> Ethnic group (optional) </p>
+                        <p class="title value-converter" style="margin: 1rem auto 5px 0px;">Why are we asking? </p>
+
+                        <div>
+                            <div class="drop-down-btn"><button class="title drop-down-list" id="contintents"> </button><svg class="arrow-svg" width='13px' aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-down" class="svg-inline--fa fa-caret-down fa-w-10"
+                                    role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path  style="fill: #9A2277;"  fill="currentColor" d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"></path></svg></div>
+                            <ul class="contintents-drop-down">
+                                <li class="title " data-country=""><a>AFRICAN AMERICAN</a></li>
+                                <li class="title " data-country=""><a>NATIVE AMERICAN</a></li>
+                                <li class="title " data-country=""><a> PACIFIC ISLANDER</a></li>
+                                <li class="title " data-country=""><a>ASIAN</a></li>
+                                <li class="title " data-country=""><a>NATIVE HAWAIIAN</a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="common-section">
+                <div class="set-of-box">
+                    <div class="heading-common-box">
+                        <p class="title input-title">Activity level </p>
+                        <p class="title value-converter"> What counts? </p>
+                    </div>
+                    <p class="title label">So we can personalize your results</p>
+
+                    <div class="custom-radio-wrap">
+                        <form class="activity-form">
+                            <div class="form-group">
+                                <input id="inactive" type="radio" name="custom-radio-btn">
+                                <label class="custom-radio" for="inactive"></label>
+
+                                <span class="title Activity-lvl">Inactive <br> <p class="title label">Less than 30 minutes a week </p></span>
+                            </div>
+                            <div class="form-group">
+                                <input id="moderately-active" type="radio" name="custom-radio-btn">
+                                <label class="custom-radio" for="moderately-active"></label>
+                                <span class="title Activity-lvl">Moderately active <br> <p class="title label">Between 30 and 60 minutes a week </p> </span>
+                            </div>
+                            <div class="form-group">
+                                <input id="active" type="radio" name="custom-radio-btn">
+                                <label class="custom-radio" for="active"></label>
+                                <span class="title Activity-lvl">Active <br> <p class="title label">Between 60 and 150 minutes a week </p> </span>
+
+
+                            </div>
+
+                        </form>
+                        <span class="result title"></span>
+
+                        <div class="main-control-btn">
+                            <button class="main-btn-calculate">CALCULATE</button>
+                            <button class="main-btn-reset" type="reset">RESET</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <script>
+            $('.age-grp').click(function() {
+                if ($(this).attr('data-age-grp') == 'adult') {
+                    $(this).addClass('active');
+                    $('[data-age-grp="child"]').removeClass('active');
+                }
+                if ($(this).attr('data-age-grp') == 'child') {
+                    $(this).addClass('active');
+                    $('[data-age-grp="adult"]').removeClass('active');
+                }
+
+
+            });
+
+            var lengthCounter = 0;
+            var weightCounter = 0;
+
+            $('.feet-to-cm').click(function() {
+                if (lengthCounter == 0) {
+                    $(this).html('Switch to Feet');
+                    $('.hide-on-cm').hide();
+                    $('.height-converter').html('cm');
+                    lengthCounter = 1;
+                } else {
+                    $(this).html('Switch to cm');
+                    $('.hide-on-cm').show();
+                    $('.height-converter').html('Inches');
+                    lengthCounter = 0;
+                }
+            });
+            $('.pound-to-kg').click(function() {
+                if (weightCounter == 0) {
+                    $(this).html('Switch to pound');
+                    $('.hide-on-kg').hide();
+                    $('.weight-converter').html('kg');
+                    weightCounter = 1;
+                } else {
+                    $(this).html('Switch to kg');
+                    $('.hide-on-kg').show();
+                    $('.weight-converter').html('Pounds');
+                    weightCounter = 0;
+                }
+            });
+
+            $('.main-btn-reset').click(function() {
+                reset();
+            })
+            $('.main-btn-calculate').click(function() {
+
+                if (lengthCounter == 0) {
+                    height = (parseFloat($("#height-in-feet").val()) * 12 + parseFloat($("#height-in-inch").val())) * 0.0254;
+                } else {
+                    height = parseInt($("#height-in-inch").val()) * 0.01;
+                }
+                if (weightCounter == 0) {
+                    weight = (parseFloat($("#weight-in-stone").val()) + (0.0714 * parseFloat($("#weight-in-pound").val()))) * 6.35;
+                } else {
+                    weight = parseInt($("#weight-in-stone").val());
+                }
+                if (parseInt($('.age-grp-input-box').val()) >= 18 && parseInt($('.age-grp-input-box').val()) < 100) {
+
+                    if (($('[data-age-grp="child"]').hasClass('active'))) {
+                        $('[data-age-grp="child"]').removeClass('active');
+                        $('[data-age-grp="adult"]').addClass('active');
+                    }
+
+                } else if (parseInt($('.age-grp-input-box').val()) < 18 && parseInt($('.age-grp-input-box').val()) > 2) {
+
+                    if (($('[data-age-grp="adult"]').hasClass('active'))) {
+                        $('[data-age-grp="adult"]').removeClass('active');
+                        $('[data-age-grp="child"]').addClass('active');
+                    }
+
+                }
+
+                // console.log(height,weight);
+                bmiState(weight, height);
+                if ($('.result').text() == "NaN") {
+                    $('.result').html("Oops! Weight or Height is out of Range.");
+                }
+            })
+
+            function calcBMI(weight, height) {
+                console.log("weight : >> " + weight);
+                console.log("height : >> " + height);
+                if (weight >= 318 || height >= 2.40) {
+                    return "Oops! Weight or Height is out of Range.";
+                } else {
+                    var bmi = weight / (height * height);
+                    return parseInt(bmi.toFixed(2));
+                    console.log("bmi : >> " + bmi);
+
+                    // return "Oops! Weight or Height is out of Range.";
+                }
+
+            }
+
+            // var weight = ($("#weight-in-stone").val() + (0.0714 * $("#weight-in-pound").val())) * 6.35;
+
+
+            $('.drop-down-btn').click(function() {
+                $('.flag-container').css('display', '');
+                $('.flag-container-hover-box').css('display', 'none');
+                countRealTime = 0;
+                countSameDay = 0;
+                if ($('.contintents-drop-down li').attr('data-country') == 'none') {
+                    $(this).addClass('active');
+                }
+                if ($('.real-time-btn').hasClass('active')) {
+                    $('.real-time-btn').removeClass('active');
+                }
+                if ($('.same-day-btn').hasClass('active')) {
+                    $('.same-day-btn').removeClass('active');
+                }
+                $('.arrow-svg').toggleClass('arrow-svg-rotate');
+                $('.contintents-drop-down').slideToggle();
+            });
+
+            $('.contintents-drop-down li').on('click', function() {
+
+                $('.drop-down-list').html($(this).text());
+                $('.contintents-drop-down').slideToggle();
+                $('.arrow-svg').toggleClass('arrow-svg-rotate');
+                $('.contintents-drop-down li').removeClass('active');
+                $(this).addClass('active');
+                $('.flag-container').css('display', '');
+
+            });
+
+            function bmiState(weight, height) {
+                if (calcBMI(weight, height) < 16.9) {
+                    $('.result').html(calcBMI(weight, height) + " Very underweight");
+                }
+                if (calcBMI(weight, height) > 17 && calcBMI(weight, height) < 18.4) {
+                    $('.result').html(calcBMI(weight, height) + " Under weight");
+
+                }
+                if (calcBMI(weight, height) > 18.5 && calcBMI(weight, height) < 24.9) {
+                    $('.result').html(calcBMI(weight, height) + " Normal weight");
+                }
+                if (calcBMI(weight, height) > 25 && calcBMI(weight, height) < 29.9) {
+                    $('.result').html(calcBMI(weight, height) + " Overweight");
+                }
+                if (calcBMI(weight, height) > 30 && calcBMI(weight, height) < 34.9) {
+                    $('.result').html(calcBMI(weight, height) + " Overweight class 1");
+                }
+                if (calcBMI(weight, height) > 35 && calcBMI(weight, height) < 40) {
+                    $('.result').html(calcBMI(weight, height) + " Overweight class 2");
+                }
+                if (calcBMI(weight, height) > 40) {
+                    $('.result').html(calcBMI(weight, height) + " Overweight class 3");
+                }
+                if (typeof(calcBMI(weight, height)) == typeof('')) {
+                    $('.result').html(calcBMI(weight, height));
+                }
+                // else if (calcBMI(weight, height) == isNaN ) {
+                //     $('.result').html("Oops! Some information is incomplete");
+                // }
+            }
+
+
+            function reset() {
+                $('form').each(function() {
+                    this.reset()
+                });
+            }
+            // });
+        </script>
+    </div>
+</body>
+
+</html>
